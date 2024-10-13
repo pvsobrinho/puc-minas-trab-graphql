@@ -1,0 +1,4 @@
+db.createUser({   user: "mongoadmin",   pwd: "mongo", roles: [ { role: "root", db: "admin" } ] })
+ 
+db.dropUser("mongoadmin")
+ 
