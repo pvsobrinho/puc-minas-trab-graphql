@@ -6,8 +6,8 @@ const { ApolloServer } = require("apollo-server");
 const typeDefs = require("./typeDefs");
 const resolvers = require("./resolvers/AeronaveResolver");
 
-// Conexão com o MongoDB
-const dbUri = `mongodb://${process.env.DB_HOST}`;
+// Conexão com o MongoDB - Usar DB_URI diretamente do .env
+const dbUri = process.env.DB_URI;
 const dbOptions = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
